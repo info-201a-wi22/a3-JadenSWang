@@ -1,0 +1,40 @@
+---
+title: 'Assignment 3: Data Visualization (incarceration)'
+author: "Jaden Wang"
+date: "2/28/2022"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Introduction
+In this assignment we will be focusing on male vs female incarceration. By navigating the rate at which the percentage of females vs males are incarcerated we can see how society has moved as a whole in a certain direction (if it even has changed at all). 
+
+### Summary
+As shown in the data in analysis.R, we notice that over time, the total number of incarcerations has indeed increased. We will be focusing on the prison population as that seems to have a more profound impact on a society
+- First, I calculated the year for the Highest and Lowest incarcerations seen in (highest_incarceration_year) and (lowest_incarceration_year)
+- Breaking that down into two pieces each respectively by gender, we see (num_men_for_highest) and (num_women_for_highest)
+- We then do the same for lowest (num_women_for_lowest), (num_men_for_lowest)
+- Calculating the percentage of men vs women 
+Comparing the percent change between men and women we see that the incarceration of women increased negligibly whereas the incarceration of men increased quite drastically 
+
+### Trends over Time
+```{r, echo=FALSE, warning = FALSE, message = FALSE, error = FALSE}
+source("../source/comparison.R")
+```
+
+> The chart shows that men vastly outnumber women incarcerated as well as have been steadily increasing vs women whom have been generally stagnant
+
+### Variable Comparison
+```{r, echo=FALSE,warning = FALSE, message = FALSE, error = FALSE}
+source("../source/variable_comparison.R")
+```
+
+> The chart shows that the population increase vs the incarceration increase for women are generally linear showing a stagnation in incarceration among women (which is good)
+
+### Map
+```{r, echo=FALSE, warning = FALSE, message = FALSE, error = FALSE}
+source("../source/map.R")
+map
+```
+
+> the map shows which states seem to have the most incarceration, this can be also be boiled down to population size, however
