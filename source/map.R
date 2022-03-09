@@ -21,3 +21,4 @@ map <- ggplot(state_shape) + geom_polygon(
 map <-map + ggtitle("A Map Showing Prison Population in Each State in the US in 2013")
 map <- ggplotly(map)
 map
+

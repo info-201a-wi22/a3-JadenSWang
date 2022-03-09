@@ -7,13 +7,16 @@ date: "2/28/2022"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ### Introduction
-In this assignment we will be focusing on male vs female incarceration. By navigating the rate at which the percentage of females vs males are incarcerated we can see how society has moved as a whole in a certain direction (if it even has changed at all). 
+In this assignment we will be focusing on male vs female incarceration. Society as a whole has seemed to forgotten that we tend to toss society's failures away into pits and throw away the key. By navigating the rate at which the percentage of females vs males are incarcerated we can see how society has moved as a whole in a certain direction (if it even has changed at all). Only by analyzing this data can we decide what change, if any, should be made to support existing or future claims.
 
+```{r, echo=FALSE, warning = FALSE, message = FALSE, error = FALSE}
+source("../source/analysis.R")
+```
 ### Summary
 As shown in the data in analysis.R, we notice that over time, the total number of incarcerations has indeed increased. We will be focusing on the prison population as that seems to have a more profound impact on a society
-- First, I calculated the year for the Highest and Lowest incarcerations seen in (highest_incarceration_year) and (lowest_incarceration_year)
-- Breaking that down into two pieces each respectively by gender, we see (num_men_for_highest) and (num_women_for_highest)
-- We then do the same for lowest (num_women_for_lowest), (num_men_for_lowest)
+- First, I calculated the year for the Highest and Lowest incarcerations seen in (``r highest_incarceration_year``) and (``r lowest_incarceration_year``)
+- Breaking that down into two pieces each respectively by gender, we see (``r num_men_for_highest``) and (``r num_women_for_highest``)
+- We then do the same for lowest (``r num_women_for_lowest``), (``r num_men_for_lowest``)
 - Calculating the percentage of men vs women 
 Comparing the percent change between men and women we see that the incarceration of women increased negligibly whereas the incarceration of men increased quite drastically 
 
@@ -22,14 +25,14 @@ Comparing the percent change between men and women we see that the incarceration
 source("../source/comparison.R")
 ```
 
-> The chart shows that men vastly outnumber women incarcerated as well as have been steadily increasing vs women whom have been generally stagnant
+> The chart above plots the change of female incarceration and male incarceration on the same axis. We can see here that in the late 2000s male incarceration already outnumbered female incarceration many many times over. Over the years, we see that the female incarceration rate is generally flat (despite increased poopulation size) whereas male incarceration has risen significantly. 
 
 ### Variable Comparison
 ```{r, echo=FALSE,warning = FALSE, message = FALSE, error = FALSE}
 source("../source/variable_comparison.R")
 ```
 
-> The chart shows that the population increase vs the incarceration increase for women are generally linear showing a stagnation in incarceration among women (which is good)
+> The chart above shows the rate of incarceration in women relative to the current female population size in the United States. Because the x and y axises are increasing generally linearly, the somewhat linear regression of the chart shows that over time, it seems the percentage of women incarcerated is somewhat stable (which is a good thing). This kind of chart allows us see the change in percentage without actually calculating the percentages. This way we're able to use regressions to analyze changes in ratios. 
 
 ### Map
 ```{r, echo=FALSE, warning = FALSE, message = FALSE, error = FALSE}
@@ -37,4 +40,4 @@ source("../source/map.R")
 map
 ```
 
-> the map shows which states seem to have the most incarceration, this can be also be boiled down to population size, however
+> This map of the United States uses a red gradient where the darker the red the higher the incarceration rate. This map is useful in determining which states might require the most funding for their prison systems but unfortunately does not take into account of population size. A normalized data set using percentage of incarcerated per state might be a better map to see which states have the biggest incarceration problem.
